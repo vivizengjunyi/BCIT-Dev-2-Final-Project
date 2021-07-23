@@ -6,6 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Put Web Page Title Here...</title>
+        <script src="https://kit.fontawesome.com/769604f610.js" crossorigin="anonymous"></script>
 
         <!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
         <!-- Put Google Fonts Here -->
@@ -13,10 +14,207 @@
         <!-- end Google Fonts -->
 
         <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
-        <link rel="stylesheet" href="styles/styles.css?cb=1626987825138" />
+        <!-- <link rel="stylesheet" href="styles/styles.css?cb=1626987825138" /> -->
+        <link rel="stylesheet" href="scss/styles.css">
     </head>
     <body>
-        <h1>I dont know what to say..</h1>
+        <section>
+            <header>
+                
+                    <nav>
+                        
+                        <div class="logo"></div>
+
+                        <button class="“btn-menu”" id="“btn-menu”">
+                            <span class="“button-content”">
+                                <span class="“text”">Menu</span>
+                                <span class="“bar”"></span> </span
+                            ><!-- end button-content -->
+                        </button>
+                        <ul>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">PRODUCTS</a></li>
+                            <li><a href="#">SERVICES</a></li>
+                            <li><a href="#">PARTS</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">INSTALLATION MAP</a></li>
+                            <li><a href="#">PRODUCTS</a></li>
+                        </ul>
+
+                    </nav>
+            
+                <div class="banner">
+                    <h1>
+                        We design and fabricate indestructible wastewater
+                        screens. Enough said.
+                    </h1>
+                    <div class="">View Products</div>
+                    <div class="">View Services</div>
+                </div>
+                <div class="wave-white"></div>
+            </header>
+        </section>
+        <main>
+            <section class="customized">
+                <h2>Customize per order</h2>
+                <p>
+                    Just as no two treatment plants are the same, no two of our
+                    screening, grit handling or sludge thickening products are
+                    either. We’ll help determine exactly what you need.
+                </p>
+                <div>
+                    <figure>
+                        <img src="" alt="" />
+
+                        <figcaption>Screening</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="" alt="" />
+
+                        <figcaption>SCREENING HANDLING</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="" alt="" />
+
+                        <figcaption>GRIT HANDLING</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="" alt="" />
+
+                        <figcaption>SLUDGE</figcaption>
+                    </figure>
+                </div>
+                <div class="wave-blue"></div>
+            </section>
+            <section class="product-advisor">
+                <h2>PRODUCT ADVISOR</h2>
+                <p>Find your project's perfect fit.</p>
+                <form action="product-advisor">
+                    <label for="product-info">Product type</label> 
+                    <select id="product-info" name="product-info">
+                        <option value="Select">Select</option>
+                        <option value="teacher">Lorem ipsum</option>
+                        <option value="police">Lorem ipsum</option>
+                        <option value="sales">Lorem ipsum</option>
+                        <option value="developer">Lorem ipsum</option>
+                        <option value="physician">Lorem ipsum</option>
+                    </select>
+                    <label for="product-info">Screen Location</label>  
+                    <select id="product-info" name="product-info">
+                        <option value="Select">Select</option>
+                        <option value="teacher">Lorem ipsum</option>
+                        <option value="police">Lorem ipsum</option>
+                        <option value="sales">Lorem ipsum</option>
+                        <option value="developer">Lorem ipsum</option>
+                        <option value="physician">Lorem ipsum</option>
+                    </select>
+                    <label for="product-info">Flow Type</label><br>
+                    <select id="product-info" name="product-info">
+                        <option value="Select">Select</option>
+                        <option value="teacher">Lorem ipsum</option>
+                        <option value="police">Lorem ipsum</option>
+                        <option value="sales">Lorem ipsum</option>
+                        <option value="developer">Lorem ipsum</option>
+                        <option value="physician">Lorem ipsum</option>
+                    </select>
+                    <label for="product-info">Channel Depth</label>
+                    <select id="product-info" name="product-info">
+                        <option value="Select">Select</option>
+                        <option value="teacher">Lorem ipsum</option>
+                        <option value="police">Lorem ipsum</option>
+                        <option value="sales">Lorem ipsum</option>
+                        <option value="developer">Lorem ipsum</option>
+                        <option value="physician">Lorem ipsum</option>
+                    </select>
+                    <label for="product-info">Channel Width</label>
+                    <select id="product-info" name="product-info">
+                        <option value="Select">Select</option>
+                        <option value="teacher">Lorem ipsum</option>
+                        <option value="police">Lorem ipsum</option>
+                        <option value="sales">Lorem ipsum</option>
+                        <option value="developer">Lorem ipsum</option>
+                        <option value="physician">Lorem ipsum</option>
+                    </select>
+
+                    <input type="submit" />
+                </form>
+            </section>
+
+            <section class="about">
+                <div class="about-bg">
+                    <h2>
+                        Delivering clean safe water since 1975. Refreshing
+                        indeed.
+                    </h2>
+                    <p>
+                        Vulcan wastewater screening equipment has played a vital
+                        role in protecting the water supply of more than 900
+                        cities and communities throughout the world.
+                    </p>
+                    <a href="#">ABOUT US</a>
+                </div>
+
+                <div class="video">
+                    <video src=""></video>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <h2>Stay in the know. Sign up for our newsletter</h2>
+
+                <form action="subscribe to newsletter">
+                    <input id="email"  name="email" type="text" placeholder="Enter your email" required>
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </form>
+
+            </section>
+
+            <section class="map">
+
+                <h2>Installed in a city near you</h2>
+                <a href="#">Find a Vulcan Install</a>
+
+                <!-- I think the map is an image instead of an interactive map -->
+
+                <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="501" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=arizona&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:501px;}</style><a href="https://www.embedgooglemap.net">google map link generator</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:501px;}</style></div></div> -->
+
+                <img src="images/map.png" alt="map of the south west of the United States" width="320px" height="250px">
+
+            </section>
+
+            <section class="contact">
+
+                <h2>Ready to spec Vulcan for your project?</h2>
+                <a href="#">Contact Us</a>
+
+                <div class="wave-sky-blue"></div>
+
+            </section>
+
+
+        </main>
+
+        <footer>
+
+            <img src="" alt="Site Logo">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.445 17.827c-3.684 1.684-9.401-9.43-5.8-11.308l1.053-.519 1.746 3.409-1.042.513c-1.095.587 1.185 5.04 2.305 4.497l1.032-.505 1.76 3.397-1.054.516z"/></svg>
+
+            <a href="tel:17126422755">+1 712-642-2755</a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
+
+            <a href="#">Contact Us</a>
+
+            <p>Copyright 2017. All Rights Reserved</p>
+
+
+        </footer>
         <!-- Put your HTML code here... -->
 
         <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
