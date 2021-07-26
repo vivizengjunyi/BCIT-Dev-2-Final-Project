@@ -1,0 +1,107 @@
+.customized {
+    
+    // max-width: 90vw;
+    color:rgb(83, 83, 83);
+    
+    
+
+    h2 {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0 4rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+    }
+
+    figcaption {
+        float: right;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
+    .fig-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-template-columns: 180px 140px;
+        grid-template-rows: 4fr;
+    }
+
+    .fig-1 {
+        border-bottom: solid lightgrey 2px;
+        padding-bottom: 1rem;
+        min-width: 100%;
+    }
+
+    .fig-1 img {
+        max-width:57vw;
+
+    }
+
+    .fig-1 figcaption {
+        transform: translateY(363%);
+        padding-right: 1rem;
+    }
+
+    .fig-2 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        border-bottom: solid lightgrey 2px;
+        padding-bottom: 1rem;
+    }
+
+    .fig-2 img {
+        max-width: 60vw;
+    }
+
+    .fig-2 figcaption {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        max-width: 40vw;
+        transform: translateY(200%);
+        padding-left:0.5rem;
+    }
+
+    .fig-3 {
+        grid-row:3/4;
+        grid-column: 1/2;
+        border-bottom: solid lightgrey 2px;
+        padding: 1rem 0;
+    }
+
+    .fig-3 figcaption {
+        max-width: 40vw;
+        transform: translateY(170%);
+        padding-left:0.5rem;
+    }
+
+    .fig-3 img {
+        max-width: 60vw;
+    }
+
+    .fig-4 {
+        padding-bottom: 2rem;
+    }
+
+    .fig-4 figcaption {
+        max-width: 40vw;
+        transform: translateY(190%);
+        padding-left:1rem;
+    }
+
+    .fig-4 img {
+        max-width: 58vw;
+    }
+    
+  
+   
+}
