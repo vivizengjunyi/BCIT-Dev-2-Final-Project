@@ -6,8 +6,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url("/dev/images/bg-section-about-us.jpg");
-        background-color: lightblue;    
+        background-image: url("/images/bg-section-about-us.jpg");   
         min-height: 570px;
         max-width: 100vw;
     }
@@ -17,13 +16,15 @@
         font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
+        max-width: 500px;
     }
 
     p {
-        transform: translateY(140%);
+        transform: translateY(200%);
         font-size: 1rem;
         font-weight: 400;
-        max-width: 200px;
+        min-width: 300px;
+        max-width: 300px;
     }
 
     a {
@@ -42,5 +43,92 @@
 
     .video video {
         border: solid 12px rgba(21,74,102,255);
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+    .about {
+
+        h2 {
+            transform: translateY(100%);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 90vw;
+        }
+
+        p {
+            transform: translateY(190%);
+            font-size: 1rem;
+            font-weight: 400;
+            min-width: 500px;
+            max-width: 500px;
+            line-height: 1.2;
+        }
+
+
+    }
+}
+
+
+@media (min-width: $breakpoint-desktop) {
+
+    .about {
+
+        h2 {
+            transform: translateY(100%);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 60vw;
+        }
+
+        p {
+            transform: translateY(190%);
+            font-size: 1rem;
+            font-weight: 400;
+            min-width: 500px;
+            max-width: 500px;
+            line-height: 1.2;
+        }
+
+
+    }
+
+}
+
+
+@media (min-width: 83.75em) {
+
+    .about {
+
+        h2 {
+            transform: translateY(170%);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 45vw;
+        }
+
+        p {
+            transform: translateY(430%);
+            font-size: 1rem;
+            font-weight: 400;
+            min-width: 630px;
+            max-width: 630px;
+            line-height: 1.2;
+        }
+
+        a {
+            @include list-style;
+            color: white;
+            text-transform: uppercase;
+            transform: translateY(490%);
+            border: solid white 1px;
+            padding: 0.8rem 3.3rem;
+            font-weight: 700;
+        }
+
     }
 }

@@ -1,22 +1,29 @@
 .customized {
     
     // max-width: 90vw;
+    position: relative;
     color:rgb(83, 83, 83);
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    .fig-flex {
+        // position: absolute;
+    }
+    
     h2 {
         text-align: center;
         font-size: 1.7rem;
         font-weight: 700;
         text-transform: uppercase;
-        padding: 0 4rem;
+        // padding: 0 4rem;
         margin-bottom: 1rem;
     }
 
     p {
         text-align: center;
         font-weight: 500;
+        color: black;
         margin-bottom: 3rem;
         padding: 0 2rem;
     }
@@ -28,18 +35,11 @@
         font-size: 1.2rem;
     }
 
-    .fig-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        grid-template-columns: 180px 140px;
-        grid-template-rows: 4fr;
-    }
 
     .fig-1 {
         border-bottom: solid lightgrey 2px;
         padding-bottom: 1rem;
-        min-width: 100%;
+        // min-width: 100%;
     }
 
     .fig-1 img {
@@ -48,13 +48,12 @@
     }
 
     .fig-1 figcaption {
-        transform: translateY(363%);
+        // transform: translateY(363%);
+        padding-top: 7.5rem;
         padding-right: 1rem;
     }
 
     .fig-2 {
-        grid-row: 2/3;
-        grid-column: 1/2;
         border-bottom: solid lightgrey 2px;
         padding-bottom: 1rem;
     }
@@ -64,16 +63,13 @@
     }
 
     .fig-2 figcaption {
-        grid-row: 2/3;
-        grid-column: 2/3;
         max-width: 40vw;
         transform: translateY(200%);
+        padding-top: 2rem;
         padding-left:0.5rem;
     }
 
     .fig-3 {
-        grid-row:3/4;
-        grid-column: 1/2;
         border-bottom: solid lightgrey 2px;
         padding: 1rem 0;
     }
@@ -81,6 +77,7 @@
     .fig-3 figcaption {
         max-width: 40vw;
         transform: translateY(170%);
+        padding-top: 2rem;
         padding-left:0.5rem;
     }
 
@@ -95,6 +92,7 @@
     .fig-4 figcaption {
         max-width: 40vw;
         transform: translateY(190%);
+        padding-top: 2.5rem;
         padding-left:1rem;
     }
 
@@ -102,6 +100,111 @@
         max-width: 58vw;
     }
     
+    @media screen and (min-width: $breakpoint-mobile) {
+
+        h2 {
+            color: rgba(21,74,102,255);
+        }
+
+        .wave-blue {
+            padding-top: 4rem;
+        }
+
+        .fig-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            align-items:flex-start;
+        }
+
+        figcaption {
+            float:bottom;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            text-align: center;
+            color: rgba(0,157,220,255);
+            padding-top: 0rem;
+
+        }
+
+        .fig-1 {
+            border: none;
+            padding-bottom: 2rem;
+        }
+
+        .fig-1 img {
+            max-width: 18vw;
+        }
+
+        .fig-1 figcaption {
+            padding-right: 20rem;
+        }
+
+        .fig-2 {
+            border: none;
+            padding-left: 2rem;
+        }
+
+        .fig-2 figcaption {
+            // padding: 0rem 4.5rem 0 0;
+            padding-right: 10rem;
+        }
+
+        .fig-2 img {
+            max-width: 18vw;
+        }
+
+        .fig-3 {
+            border: none;
+            padding: 0.5rem 1rem 1rem 0;
+        }
+
+        .fig-3 figcaption {
+            padding-right: 1rem;
+        }
+
+        .fig-3 img {
+            max-width: 18vw;
+        }
+
+        .fig-4 {
+            border: none;
+            padding-left: 3rem;
+        }
+
+        .fig-4 figcaption {
+            padding: 0 1rem 0 0;
+        }
+
+
+        .fig-4 img {
+            max-width: 18vw;
+        }
+    }
   
+
+
+   
+   
    
 }
+
+
+ @media (min-width: $breakpoint-tablet) {
+        .customized {
+
+            figcaption {
+                float:bottom;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                text-align: center;
+                color: rgba(0,157,220,255);
+                margin-top: 1rem;
+            }
+
+        }
+        
+    }
+
