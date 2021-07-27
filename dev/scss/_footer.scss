@@ -1,3 +1,27 @@
-footer a {
-    @include list-style;
+/** @format */
+
+// footer a {
+//     @include list-style;
+
+// }
+
+.wave-sky-blue {
+    width: 100vw;
+    display: block;
+}
+
+footer {
+    position: absolute;
+
+    background-color: #244a64;
+    // .wave-sky-blue {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     max-width: 100%;
+    // }
+    .logo {
+        width: 100px;
+        z-index: 2;
+    }
 }
