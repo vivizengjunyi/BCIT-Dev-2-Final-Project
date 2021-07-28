@@ -7,6 +7,7 @@
         flex-direction: column;
         align-items: center;
         background-image: url("/images/bg-section-about-us.jpg");   
+        background-position-x: 47%;
         min-height: 570px;
         max-width: 100vw;
     }
@@ -35,23 +36,38 @@
         border: solid white 1px;
         padding: 0.8rem 1.8rem;
     }
-    .video {
 
+    .video-container {
+        padding: 7rem;
         background-color: rgba(0,157,220,255);
+    }
 
+    .video {
+        // width: 80%;
+       
 
     
         .div-container{
+        
+            // background-color: rgba(0,157,220,255);
+            // position: relative;
+            // width: 100%;
+            // overflow: hidden;
+            // padding-top: 30.25%;
+            // margin-left: 17%;
+            // border: solid 15px rgba(21, 74, 102, 255);
+            // background-color: green;
+            // width: 240px;
+            // height: 2px;
 
             position: relative;
             width: 100%;
+            
             overflow: hidden;
             padding-top: 56.25%;
-            margin-left: 25%;
-            border: solid 15px rgba(21, 74, 102, 255);
             background-color: green;
-            width: 300px;
-            height: 200px;
+    
+           
 
             iframe {
                 position: absolute;
@@ -62,6 +78,7 @@
                 width: 100%;
                 height: 100%;
                 border: none;
+                border: solid 15px rgba(21, 74, 102, 255);
             }
 
         }
@@ -136,6 +153,11 @@
             min-width: 500px;
             max-width: 500px;
             line-height: 1.2;
+        }
+
+        .video-container {
+            padding: 3rem 15rem;
+            background-color: rgba(0,157,220,255);
         }
 
 
