@@ -1,101 +1,17 @@
 /** @format */
 
-//flex attempt
-
-// .contact-location {
-//     display: flex;
-//     flex-direction: column;
-//     font-family: "Roboto Condensed", sans-serif;
-//     text-transform: uppercase;
-//     font-weight: 700;
-//     h2 {
-//         font-size: 25px;
-
-//         margin: 2rem;
-//     }
-
-//     .map {
-//         position: relative;
-//         text-align: center;
-//         width: 100%;
-
-//         img {
-//             width: 100%;
-//             height: auto;
-//         }
-//         .map-txt {
-//             color: #504f4f;
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-50%, -50%);
-//             a {
-//                 color: #504f4f;
-//                 padding: 0.5rem;
-//                 border: 1px solid #504f4f;
-//             }
-//         }
-//     }
-//     .contact {
-//         height: 250px;
-//         width: 100%;
-
-//         position: relative;
-//         text-align: center;
-//         background-color: #244a64;
-//         color: white;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//     }
-
-//     .contact-txt {
-//         padding: 1rem;
-//         // display: flex;
-//         // flex-direction: column;
-//         // justify-content: center;
-//         // align-items: center;
-
-//         a {
-//             color: white;
-//             border: 1px solid white;
-//             padding: 0.5rem;
-//         }
-//     }
-//     @media (min-width: $breakpoint-tablet) {
-//         flex-direction: row;
-//         h2 {
-//             color: red;
-//         }
-//         .map {
-//             width: 50%;
-//         }
-//         .contact {
-//             width: 50%;
-//         }
-//     }
-// }
-
-/** @format */
+// font-family: "Roboto Condensed", sans-serif;
 
 .contact-location {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    h2 {
-        font-size: 25px;
-
-        margin: 2rem;
-    }
-
     .map {
         position: relative;
         text-align: center;
         order: -2;
-
         img {
             width: 100%;
             height: auto;
@@ -106,6 +22,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            h2 {
+                font-size: 25px;
+                margin: 2rem;
+            }
             a {
                 color: #504f4f;
                 padding: 0.5rem;
@@ -122,19 +42,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .contact-txt {
-        padding: 1rem;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-
-        a {
-            color: white;
-            border: 1px solid white;
-            padding: 0.5rem;
+        .contact-txt {
+            padding: 1rem;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            h2 {
+                font-size: 25px;
+                margin: 2rem;
+            }
+            a {
+                color: white;
+                border: 1px solid white;
+                padding: 0.5rem;
+            }
         }
     }
     @media (min-width: $breakpoint-tablet) {
@@ -144,19 +66,22 @@
         grid-auto-flow: dense;
         .map {
             order: 2;
-        }
-        .contact-txt,
-        .map-txt {
-            a {
-                color: white;
-                border: none;
-                background-color: #429bd6;
+            .map-txt {
+                a {
+                    color: white;
+                    border: none;
+                    background-color: #429bd6;
+                }
             }
         }
-        .btn {
-            color: white;
-            border: none;
-            background-color: #429bd6;
+        .contact {
+            .contact-txt {
+                a {
+                    color: white;
+                    border: none;
+                    background-color: #429bd6;
+                }
+            }
         }
     }
 }
