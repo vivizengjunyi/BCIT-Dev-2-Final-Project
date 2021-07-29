@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -437,6 +438,7 @@
             <!-- nav end -->
 
             <!-- <div class="banner">
+
             <h1>
                 We design and fabricate indestructible wastewater
                 screens. Enough said.
@@ -454,34 +456,38 @@
                     screening, grit handling or sludge thickening products are
                     either. We’ll help determine exactly what you need.
                 </p>
-                <div>
-                    <figure>
-                        <img src="" alt="" />
-
+                <div class="fig-grid">
+                    <figure class="fig-1">
+                        <img src="images/machine-01-300x274.png" alt="screnning machine" />
+    
                         <figcaption>Screening</figcaption>
                     </figure>
-                    <figure>
-                        <img src="" alt="" />
-
-                        <figcaption>SCREENING HANDLING</figcaption>
+                    
+                    <figure class="fig-2">
+                        <img src="images/machine-02-300x274.png" alt="screening handling machine" />
+    
+                        <figcaption>Screening Handling</figcaption>
                     </figure>
-                    <figure>
-                        <img src="" alt="" />
-
-                        <figcaption>GRIT HANDLING</figcaption>
+                    <figure class="fig-3">
+                        <img src="images/machine-03-300x274.png" alt="grit handling machine" />
+    
+                        <figcaption>Grit Handling</figcaption>
                     </figure>
-                    <figure>
-                        <img src="" alt="" />
-
-                        <figcaption>SLUDGE</figcaption>
+                    <figure class="fig-4">
+                        <img src="images/machine-04-300x274.png" alt="sludge thickening machine" />
+    
+                        <figcaption>Sludge Thickening</figcaption>
                     </figure>
                 </div>
-                <div class="wave-blue"></div>
+                <div class="wave-blue">
+                    <img src="images/wave-blue-dark.png" alt="blue dark wave">
+                </div>
             </section>
             <section class="product-advisor">
-                <h2>PRODUCT ADVISOR</h2>
+                <h2>Product Advisor</h2>
                 <p>Find your project's perfect fit.</p>
-                <form action="product-advisor">
+                <hr>
+                <form class="form-flex" action="product-advisor">
                     <label for="product-info">Product type</label>
                     <select id="product-info" name="product-info">
                         <option value="Select">Select</option>
@@ -500,7 +506,7 @@
                         <option value="developer">Lorem ipsum</option>
                         <option value="physician">Lorem ipsum</option>
                     </select>
-                    <label for="product-info">Flow Type</label><br />
+                    <label for="product-info">Flow Type</label>
                     <select id="product-info" name="product-info">
                         <option value="Select">Select</option>
                         <option value="teacher">Lorem ipsum</option>
@@ -527,11 +533,11 @@
                         <option value="developer">Lorem ipsum</option>
                         <option value="physician">Lorem ipsum</option>
                     </select>
-
-                    <input type="submit" />
+    
+                    <input type="button" value="FIND MY PRODUCT">
                 </form>
             </section>
-
+    
             <section class="about">
                 <div class="about-bg">
                     <h2>
@@ -543,8 +549,9 @@
                         role in protecting the water supply of more than 900
                         cities and communities throughout the world.
                     </p>
-                    <a href="#">ABOUT US</a>
+                    <a href="#">About Us</a>
                 </div>
+
                 <!-- 
                 <div class="video">
                     <iframe
@@ -566,27 +573,19 @@
                         on <a href="https://vimeo.com">Vimeo</a>.
                     </p>
                 </div> -->
-            </section>
 
+            </section>
+    
             <section class="newsletter">
                 <h2>Stay in the know. Sign up for our newsletter</h2>
-
+    
                 <form action="subscribe to newsletter">
-                    <input
-                        id="email"
-                        name="email"
-                        type="text"
-                        placeholder="Enter your email"
-                        required
-                    />
-                    <input
-                        type="submit"
-                        name="submit"
-                        id="submit"
-                        value="Submit"
-                    />
+                    <input id="email" name="email" type="text" placeholder="Enter your email" required>
+                    <input type="submit" name="submit" id="submit" value="Submit">
                 </form>
+    
             </section>
+
 
             <div class="contact-location">
                 <section class="grid-item map">
@@ -678,15 +677,19 @@
                     <p>Copyright 2017. All Rights Reserved</p>
                 </div>
             </div>
+
         </footer>
         <!-- </div> -->
 
         <!-- Put your HTML code here... -->
-
+    
         <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
         <script src="scripts/libs/jquery/jquery-3.4.1.min.js"></script>
         <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
+
         <script src="scripts/script.min.js?cb=1627484735946"></script>
         <!-- *** IMPORTANT *** DO NOT ADD ADDITIONAL SCRIPT LINKS HERE...If you want to add additional scripts simply save the script files to the "dev/scripts" directory (for your custom scripts) and the 'dev/scripts/libs' directory for any jQuery plugins or other JavaScript libraries and Gulp will concatenate and minify them into the "script.min.js" file above. See the project instructions for details -->
     </body>
 </html>
+
+
