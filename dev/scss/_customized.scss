@@ -1,16 +1,13 @@
 .customized {
     
-    // max-width: 90vw;
+    
     position: relative;
     color:rgb(83, 83, 83);
     display: flex;
     flex-direction: column;
    
 
-    .fig-flex {
-        // position: absolute;
-    }
-
+    
     a {
         display: none;
     }
@@ -20,7 +17,7 @@
         font-size: 1.7rem;
         font-weight: 700;
         text-transform: uppercase;
-        // padding: 0 4rem;
+       
         margin-bottom: 1rem;
     }
 
@@ -53,8 +50,7 @@
         display: flex;
         flex-direction: row;
         border-bottom: solid lightgrey 2px;
-        // padding-bottom: 1rem;
-        // min-width: 100%;
+    
     }
 
     .fig-1 img {
@@ -62,17 +58,13 @@
 
     }
 
-    .fig-1 figcaption {
-        // transform: translateY(363%);
-        // padding-top: 7.5rem;
-        // padding-right: 1rem;
-    }
+    
 
     .fig-2 {
         display: flex;
         flex-direction: row;
         border-bottom: solid lightgrey 2px;
-        // padding-bottom: 1rem;
+        
     }
 
     .fig-2 img {
@@ -81,23 +73,19 @@
 
     .fig-2 figcaption {
         max-width: 40vw;
-        // transform: translateY(200%);
-        // padding-top: 2rem;
-        // padding-left:0.5rem;
+       
     }
 
     .fig-3 {
         display: flex;
         flex-direction: row;
         border-bottom: solid lightgrey 2px;
-        // padding: 1rem 0;
+        
     }
 
     .fig-3 figcaption {
         max-width: 40vw;
-        // transform: translateY(170%);
-        // padding-top: 2rem;
-        // padding-left:0.5rem;
+      
     }
 
     .fig-3 img {
@@ -107,14 +95,12 @@
     .fig-4 {
         display: flex;
         flex-direction: row;
-        // padding-bottom: 2rem;
+        
     }
 
     .fig-4 figcaption {
         max-width: 40vw;
-        // transform: translateY(190%);
-        // padding-top: 2.5rem;
-        // padding-left:1rem;
+        
     }
 
     .fig-4 img {
@@ -160,7 +146,7 @@
 
 
         figcaption {
-            // float:bottom;
+        
             font-weight: 700;
             text-transform: uppercase;
             font-size: 1.2rem;
@@ -178,7 +164,7 @@
             padding-bottom: 2rem;
             display: flex;
             flex-direction: column;
-            // align-items: flex-end;
+    
             align-items: center;
         }
 
@@ -187,23 +173,17 @@
             padding-bottom: 1rem;
         }
 
-        .fig-1 figcaption {
-            // padding-right: 20rem;
-        }
-
+      
         .fig-2 {
             border: none;
-            // padding-left: 2rem;
+            
             display: flex;
             flex-direction: column;
-            // align-items: flex-end;
+            
             align-items: center;
         }
 
-        .fig-2 figcaption {
-            // padding: 0rem 4.5rem 0 0;
-            // padding-right: 10rem;
-        }
+        
 
         .fig-2 img {
             max-width: 15vw;
@@ -212,17 +192,14 @@
 
         .fig-3 {
             border: none;
-            // padding: 0.5rem 1rem 1rem 0;
+           
             display: flex;
             flex-direction: column;
-            // align-items: flex-end;
+            
             align-items: center;
         }
 
-        .fig-3 figcaption {
-            // padding-right: 1rem;
-        }
-
+       
         .fig-3 img {
             max-width: 15vw;
             padding-bottom: 1rem;
@@ -230,15 +207,15 @@
 
         .fig-4 {
             border: none;
-            // padding-left: 3rem;
+            
             display: flex;
             flex-direction: column;
-            // align-items: flex-end;
+            
             align-items: center;
         }
 
         .fig-4 figcaption {
-            // padding: 0 1rem 0 0;
+           
         }
 
 
@@ -278,7 +255,7 @@
         .customized {
             p {
                 padding: 0 17rem;
-                // padding: 0 50%;
+                
             }
         }
     }
