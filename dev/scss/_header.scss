@@ -229,7 +229,32 @@
         }   
     }
 
-    .show {
+    .show {.about {
+
+        h2 {
+            transform: translateY(100%);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 60vw;
+        }
+
+        p {
+            transform: translateY(190%);
+            font-size: 1rem;
+            font-weight: 400;
+            min-width: 500px;
+            max-width: 500px;
+            line-height: 1.2;
+        }
+
+        .video-container {
+            padding: 3rem 15rem;
+            background-color: rgba(0,157,220,255);
+        }
+
+
+    }
         display:block;
     }
 }
@@ -284,6 +309,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
+                align-items: center;
                 gap: 20px;
                 
             }
