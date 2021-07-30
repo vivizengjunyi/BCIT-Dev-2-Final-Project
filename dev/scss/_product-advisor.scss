@@ -1,370 +1,260 @@
 .product-advisor {
+  padding: 0 2rem 4rem 2rem;
+  @include flex-column;
+  background-color: map-get($colors, customized-h2);
 
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: $font-weight-700;
+    text-align: center;
+    color: map-get($colors, text-color);
+    margin-bottom: 1rem;
+  }
 
+  p {
+    text-align: center;
+    color: map-get($colors, text-color);
+    margin-bottom: 1.8rem;
+  }
+
+  hr {
+    max-width: $width;
+    margin-bottom: 1.4rem;
+  }
+
+  .form-flex {
+    @include flex-column;
+    width: $width;
+    align-items: center;
+  }
+
+  label {
+    color: map-get($colors, text-color);
+    margin-bottom: 0.5rem;
+    font-weight: $font-weight-500;
+  }
+
+  select {
+    @include select-input-whw;
+    @include select;
+  }
+
+  select option {
+    font-weight: $font-weight-700;
+  }
+
+  input {
+    @include select-input-whw;
+    color: map-get($colors, text-color);
+    background-color: rgba(0, 157, 220, 255);
+    border: $border-none;
+    margin-top: 1rem;
+  }
+
+  .container {
+    @include flex-column;
+    width: $width;
+  }
+
+  .form-input-flex {
+    @include flex-row;
+    justify-content: center;
+  }
+
+  .input-tag {
+    @include flex-column;
+    align-items: stretch;
+    width: $width;
+  }
+
+  .container {
+    @include flex-column;
+  }
+
+  .label-form-flex {
+    @include flex-column;
+  }
+
+  hr {
+    min-width: $width;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .product-advisor {
     padding: 0 2rem 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #154a66;
-   
-    
+    @include flex-column;
+    background-color: map-get($colors, secondary-color);
+
     h2 {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-align: center;
-        color: white;
-        margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: $font-weight-700;
+      text-align: center;
+      color: map-get($colors, text-color);
+      margin-bottom: 1rem;
     }
 
     p {
-        text-align: center;
-        color: white;
-        margin-bottom: 1.8rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: map-get($colors, primary-color);
+      margin-bottom: 1.8rem;
     }
 
     hr {
-        max-width: 95vw;
-        margin-bottom: 1.4rem;
+      max-width: $width;
+      margin-bottom: 1.4rem;
     }
 
     .form-flex {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+      @include flex-column;
+      width: $width;
+      align-items: center;
     }
 
     label {
-        color: white;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
+      color: map-get($colors, text-color);
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-500;
     }
 
     select {
-        min-width: 300px;
-        min-height: 40px;
-        font-weight: 700;
-        background-color: lightgrey;
-        color: rgb(104, 104, 104);
-        margin-bottom: 1.5rem;
-        background-image: url(/images/arrow-point-down.png);
-        background-repeat: no-repeat;
-        background-position-x: 97%;
-        background-position-y: 12px;
-        padding-left: 1rem;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
+      @include select-input-whw;
+      @include select;
+      background-image: url(/images/down-arrow-blue.png);
     }
 
     select option {
-        font-weight: 700;
+      font-weight: $font-weight-700;
     }
 
-        input {
-            min-width: 300px;
-            min-height: 40px;
-            color: white;
-            font-weight: 700;
-            background-color: rgba(0,157,220,255);
-            border: none;
-            margin-top: 1rem;
-        }
+    input {
+      @include select-input-whw;
+      color: map-get($colors, text-color);
+      background-color: rgba(0, 157, 220, 255);
+      border: $border-none;
+      margin-top: 1rem;
+    }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+      @include flex-row;
+      flex-wrap: wrap;
+      width: $width;
+      justify-content: space-between;
     }
 
-    
-       
-
-
-        .form-input-flex {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-      
-        .input-tag {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            width: 100%;
-
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .label-form-flex {
-            display: flex;
-            flex-direction: column;
-        }
-      
-
-        hr {
-            min-width: 100%;
-        }
-
-
-
-        
-
-
-}
-
-
-
-
-
-@media (min-width: $breakpoint-tablet) {
-
-
-    .product-advisor {
-
-
-        padding: 0 2rem 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        background-color: #154a66;
-        
-        h2 {
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-align: center;
-            color: white;
-            margin-bottom: 1rem;
-        }
-    
-        p {
-            font-size: 1.5rem;
-            text-align: center;
-            color: #009ddc;
-            margin-bottom: 1.8rem;
-        }
-    
-        hr {
-            max-width: 95vw;
-            margin-bottom: 1.4rem;
-        }
-    
-        .form-flex {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
-        }
-    
-        label {
-            color: white;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-    
-        select {
-            min-width: 300px;
-            min-height: 40px;
-            font-weight: 700;
-            background-color: lightgrey;
-            color: rgb(104, 104, 104);
-            margin-bottom: 1.5rem;
-            background-image: url(/images/down-arrow-blue.png);
-            background-repeat: no-repeat;
-            background-position-x: 97%;
-            background-position-y: 12px;
-            padding-left: 1rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            text-indent: 1px;
-            text-overflow: '';
-        }
-    
-        select option {
-            font-weight: 700;
-        }
-    
-        input {
-            min-width: 300px;
-            min-height: 40px;
-            color: white;
-            font-weight: 700;
-            background-color: rgba(0,157,220,255);
-            border: none;
-            margin-top: 1rem;
-        }
-    
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap:wrap;
-            width: 100%;
-            justify-content: space-between;
-        }
-    
-        
-    
-        .form-input-flex {
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            justify-content: center;
-        }
-    
-    
-        .input-tag {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            width: 100%;
-    
-        }
-    
-    
-        .label-form-flex {
-            display: flex;
-            flex-direction: column;
-            width: 49%;
-        }
-           
-    
-        hr {
-            min-width: 100%;
-        }
+    .form-input-flex {
+      @include flex-row;
+      width: $width;
+      justify-content: center;
     }
 
+    .input-tag {
+      @include flex-column;
+      align-items: stretch;
+      width: $width;
+    }
+
+    .label-form-flex {
+      @include flex-column;
+      width: 49%;
+    }
+
+    hr {
+      min-width: $width;
+    }
+  }
 }
-
-
-
-
-
 
 @media (min-width: $breakpoint-desktop) {
+  .product-advisor {
+    padding: 0 2rem 4rem 2rem;
+    @include flex-column;
+    background-color: map-get($colors, secondary-color);
 
-
-    .product-advisor {
-
-
-        padding: 0 2rem 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        background-color: #154a66;
-
-        h2 {
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-align: center;
-            color: white;
-            margin-bottom: 1rem;
-        }
-    
-        p {
-            font-size: 1.5rem;
-            text-align: center;
-            color: #009ddc;
-            margin-bottom: 1.8rem;
-        }
-    
-        hr {
-            max-width: 95vw;
-            margin-bottom: 1.4rem;
-        }
-    
-        .form-flex {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-    
-        label {
-            color: white;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-    
-        select {
-            
-            width: 100%;
-            min-width: 0;
-            font-weight: 700;
-            background-color: lightgrey;
-            color: rgb(104, 104, 104);
-            margin-bottom: 1.5rem;
-            background-image: url(/images/down-arrow-blue.png);
-            background-repeat: no-repeat;
-            background-position-x: 97%;
-            background-position-y: 12px;
-            padding-left: 1rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            text-indent: 1px;
-            text-overflow: '';
-        }
-    
-        select option {
-            font-weight: 700;
-        }
-    
-        input {
-            min-width: 300px;
-            min-height: 40px;
-            color: white;
-            font-weight: 700;
-            background-color: rgba(0,157,220,255);
-            border: none;
-            margin-top: 1rem;
-        }
-    
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap:nowrap;
-            width: 100%;
-            justify-content: space-between;
-        }
-    
-        
-    
-        .form-input-flex {
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            justify-content: center;
-        }
-    
-    
-        .input-tag {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            width: 100%;
-    
-        }
-    
-    
-        .label-form-flex {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 19%;
-        }
-           
-    
-        hr {
-            min-width: 100%;
-        }
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: $font-weight-700;
+      text-align: center;
+      color: map-get($colors, text-color);
+      margin-bottom: 1rem;
     }
 
+    p {
+      font-size: 1.5rem;
+      text-align: center;
+      color: map-get($colors, primary-color);
+      margin-bottom: 1.8rem;
+    }
+
+    hr {
+      max-width: $width;
+      margin-bottom: 1.4rem;
+    }
+
+    .form-flex {
+      @include flex-column;
+      width: $width;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    label {
+      color: map-get($colors, text-color);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    select {
+      @include select-input-whw;
+      min-width: 0;
+      width: $width;
+      @include select;
+      background-image: url(/images/down-arrow-blue.png);
+    }
+
+    select option {
+      font-weight: $font-weight-700;
+    }
+
+    input {
+      @include select-input-whw;
+      color: map-get($colors, text-color);
+      background-color: rgba(0, 157, 220, 255);
+      border: $border-none;
+      margin-top: 1rem;
+    }
+
+    .container {
+      @include flex-row;
+      flex-wrap: nowrap;
+      width: $width;
+      justify-content: space-between;
+    }
+
+    .form-input-flex {
+      @include flex-row;
+      width: $width;
+      justify-content: center;
+    }
+
+    .input-tag {
+      @include flex-column;
+      align-items: stretch;
+      width: $width;
+    }
+
+    .label-form-flex {
+      @include flex-column;
+      align-items: flex-start;
+      width: 19%;
+    }
+
+    hr {
+      min-width: $width;
+    }
+  }
 }
-
-

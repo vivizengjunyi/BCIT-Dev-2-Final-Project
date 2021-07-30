@@ -1,259 +1,217 @@
 .customized {
-    
-    
-    position: relative;
-    color:rgb(83, 83, 83);
+  position: relative;
+  color: rgb(83, 83, 83);
+  @include flex-column;
+  // display: flex;
+  // flex-direction: column;
+
+  a {
+    display: $border-none;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    font-weight: $font-weight-500;
+    color: black;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  figcaption {
     display: flex;
-    flex-direction: column;
-   
+    font-weight: $font-weight-700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-items: center;
+    padding-top: auto 0;
+    width: 100px;
+    padding-left: 3rem;
+  }
 
-    
-    a {
-        display: none;
-    }
-    
+  .fig-1 {
+    @include flex-row;
+    // display: flex;
+    // flex-direction: row;
+    border-bottom: $figure-border;
+  }
+
+  .fig-1 img {
+    max-width: 57vw;
+  }
+
+  .fig-2 {
+    @include flex-row;
+    // display: flex;
+    // flex-direction: row;
+    border-bottom: $figure-border;
+  }
+
+  .fig-2 img {
+    max-width: 60vw;
+  }
+
+  .fig-2 figcaption {
+    max-width: 40vw;
+  }
+
+  .fig-3 {
+    @include flex-row;
+    // display: flex;
+    // flex-direction: row;
+    border-bottom: $figure-border;
+  }
+
+  .fig-3 figcaption {
+    max-width: 40vw;
+  }
+
+  .fig-3 img {
+    max-width: 60vw;
+  }
+
+  .fig-4 {
+    @include flex-row;
+    // display: flex;
+    // flex-direction: row;
+  }
+
+  .fig-4 figcaption {
+    max-width: 40vw;
+  }
+
+  .fig-4 img {
+    max-width: 58vw;
+  }
+
+  .wave-blue {
+    transform: translateY(3px);
+  }
+
+  @media screen and (min-width: $breakpoint-mobile) {
     h2 {
-        text-align: center;
-        font-size: 1.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-       
-        margin-bottom: 1rem;
+      color: rgba(21, 74, 102, 255);
     }
 
-    p {
-        text-align: center;
-        font-weight: 500;
-        color: black;
-        margin-bottom: 3rem;
-        padding: 0 2rem;
+    a {
+      color: map-get($colors, view-selection-color);
+      text-decoration: underline;
+      font-weight: $font-weight-500;
+      align-items: center;
+      padding-top: 1rem;
+      display: block;
     }
 
-    figcaption {
-        float: right;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        padding-top: auto 0;
-        display: flex;
-        width: 100px;
-        padding-left: 3rem;
-        
-
-    }
-
-
-    .fig-1 {
-        display: flex;
-        flex-direction: row;
-        border-bottom: solid lightgrey 2px;
-    
-    }
-
-    .fig-1 img {
-        max-width:57vw;
-
-    }
-
-    
-
-    .fig-2 {
-        display: flex;
-        flex-direction: row;
-        border-bottom: solid lightgrey 2px;
-        
-    }
-
-    .fig-2 img {
-        max-width: 60vw;
-    }
-
-    .fig-2 figcaption {
-        max-width: 40vw;
-       
-    }
-
-    .fig-3 {
-        display: flex;
-        flex-direction: row;
-        border-bottom: solid lightgrey 2px;
-        
-    }
-
-    .fig-3 figcaption {
-        max-width: 40vw;
-      
-    }
-
-    .fig-3 img {
-        max-width: 60vw;
-    }
-
-    .fig-4 {
-        display: flex;
-        flex-direction: row;
-        
-    }
-
-    .fig-4 figcaption {
-        max-width: 40vw;
-        
-    }
-
-    .fig-4 img {
-        max-width: 58vw;
+    .fig-1-a {
+      padding-top: 2.1rem;
     }
 
     .wave-blue {
-        transform: translateY(3px);
+      padding-top: 4rem;
     }
-    
-    @media screen and (min-width: $breakpoint-mobile) {
 
-        h2 {
-            color: rgba(21,74,102,255);
-        }
-
-        a {
-            color: rgb(77, 81, 85);
-            text-decoration:underline;
-            font-weight: 500;
-            align-items: center;
-            padding-top: 1rem;
-            display: block;
-        }
-
-        .fig-1-a {
-            padding-top: 2.1rem;
-        }
-
-        .wave-blue {
-            padding-top: 4rem;
-        }
-
-        .fig-flex {
-            display: flex;
-            flex-direction: row;
-            flex-wrap:nowrap;
-            align-items:baseline;
-            justify-content: space-evenly;
-
-            
-        }
-
-
-        figcaption {
-        
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            text-align: center;
-            color: rgba(0,157,220,255);
-            padding: 1.2rem 0 0 0;
-            margin-top: 1rem;
-            display: flex;
-            justify-content: flex-end;
-
-        }
-
-        .fig-1 {
-            border: none;
-            padding-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-    
-            align-items: center;
-        }
-
-        .fig-1 img {
-            max-width: 15vw;
-            padding-bottom: 1rem;
-        }
-
-      
-        .fig-2 {
-            border: none;
-            
-            display: flex;
-            flex-direction: column;
-            
-            align-items: center;
-        }
-
-        
-
-        .fig-2 img {
-            max-width: 15vw;
-            padding-bottom: 1rem;
-        }
-
-        .fig-3 {
-            border: none;
-           
-            display: flex;
-            flex-direction: column;
-            
-            align-items: center;
-        }
-
-       
-        .fig-3 img {
-            max-width: 15vw;
-            padding-bottom: 1rem;
-        }
-
-        .fig-4 {
-            border: none;
-            
-            display: flex;
-            flex-direction: column;
-            
-            align-items: center;
-        }
-
-
-
-        .fig-4 img {
-            max-width: 15vw;
-            padding-bottom: 1rem;
-        }
+    .fig-flex {
+      @include flex-row;
+      // display: flex;
+      // flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      justify-content: space-evenly;
     }
-  
 
+    figcaption {
+      font-weight: $font-weight-700;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: center;
+      color: rgba(0, 157, 220, 255);
+      padding: 1.2rem 0 0 0;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-   
-   
-   
+    .fig-1 {
+      border: $border-none;
+      padding-bottom: 2rem;
+      @include flex-column;
+      // display: flex;
+      // flex-direction: column;
+      align-items: $align-figure;
+    }
+
+    .fig-1 img {
+      max-width: 15vw;
+      padding-bottom: 1rem;
+    }
+
+    .fig-2 {
+      border: $border-none;
+      @include flex-column;
+      // display: flex;
+      // flex-direction: column;
+      align-items: $align-figure;
+    }
+
+    .fig-2 img {
+      max-width: 15vw;
+      padding-bottom: 1rem;
+    }
+
+    .fig-3 {
+      border: $border-none;
+      @include flex-column;
+      // display: flex;
+      // flex-direction: column;
+      align-items: $align-figure;
+    }
+
+    .fig-3 img {
+      max-width: 15vw;
+      padding-bottom: 1rem;
+    }
+
+    .fig-4 {
+      border: $border-none;
+      @include flex-column;
+      // display: flex;
+      // flex-direction: column;
+      align-items: $align-figure;
+    }
+
+    .fig-4 img {
+      max-width: 15vw;
+      padding-bottom: 1rem;
+    }
+  }
 }
 
-
- @media (min-width: $breakpoint-tablet) {
-        .customized {
-
-            figcaption {
-                justify-content: center;
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 1.2rem;
-                text-align: center;
-                color: rgba(0,157,220,255);
-                margin-top: 1rem;
-            }
-
-        }
-        
+@media (min-width: $breakpoint-tablet) {
+  .customized {
+    figcaption {
+      justify-content: center;
+      font-weight: $font-weight-700;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: center;
+      color: rgba(0, 157, 220, 255);
+      margin-top: 1rem;
     }
+  }
+}
 
-
-    @media (min-width: $breakpoint-desktop){
-        .customized {
-            p {
-                padding: 0 17rem;
-                
-            }
-        }
+@media (min-width: $breakpoint-desktop) {
+  .customized {
+    p {
+      padding: 0 17rem;
     }
-
+  }
+}

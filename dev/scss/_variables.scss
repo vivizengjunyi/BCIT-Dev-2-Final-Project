@@ -1,20 +1,28 @@
 //font family
- $heading-font: 'Roboto Condensed', sans-serif;
- $body-content-font: 'Roboto', sans-serif;
+$heading-font: "Roboto Condensed", sans-serif;
+$body-content-font: "Roboto", sans-serif;
 
- //media query breakpoints
+//media query breakpoints
 $breakpoint-mobile: 640px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-desktop-large: 1600px;
 
-
 $colors: (
-    text-color: white,
-    primary-color: #009ddc,
-    secondary-color: #154a66,
-    view-selection-color: #4d5155,
-    customized-h2: #154a66,
-    header-bg: rgba(0, 0, 0, 0.7),
-    
-)
+  text-color: white,
+  primary-color: #009ddc,
+  secondary-color: #154a66,
+  view-selection-color: #4d5155,
+  customized-h2: #154a66,
+  header-bg: rgba(0, 0, 0, 0.7),
+);
+
+//customized section
+
+$figure-border: solid lightgrey 2px;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$border-none: none;
+$align-figure: center;
+$width: 100%;

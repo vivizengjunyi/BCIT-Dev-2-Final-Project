@@ -1,21 +1,59 @@
-
-
 @mixin list-style {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @mixin position-transition {
-    position: absolute;
-    transition: all 0.3s ease-in-out;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+//product-advisor section
+
+@mixin select-input-whw {
+  min-width: 300px;
+  min-height: 40px;
+  font-weight: $font-weight-700;
+}
+
+@mixin select {
+  background-color: lightgrey;
+  color: #696969;
+  margin-bottom: 1.5rem;
+  background-image: url(/images/arrow-point-down.png);
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 12px;
+  padding-left: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+//about
+
+@mixin h2 {
+  transform: translateY(100%);
+  font-size: 2rem;
+  font-weight: $font-weight-700;
+  text-transform: uppercase;
+}
+@mixin p {
+  transform: translateY(190%);
+  font-size: 1rem;
+  font-weight: 400;
+  min-width: 500px;
+  max-width: 500px;
+  line-height: 1.2;
 }
