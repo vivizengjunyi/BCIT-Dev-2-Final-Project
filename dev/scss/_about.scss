@@ -1,206 +1,119 @@
 /** @format */
 
 .about {
-    color: white;
-    text-align: center;
-    .about-bg {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url("/images/bg-section-about-us.jpg");   
-        background-position-x: 47%;
-        background-color: lightblue;
-        min-height: 570px;
-        max-width: 100vw;
+  color: map-get($colors, text-color);
+  text-align: center;
+  .about-bg {
+    @include flex-column;
+    align-items: center;
+    background-image: url("/images/bg-section-about-us.jpg");
+    background-position-x: 47%;
+    background-color: lightblue;
+    min-height: 570px;
+    max-width: $width;
+  }
+
+  h2 {
+    @include h2;
+    max-width: 500px;
+  }
+
+  p {
+    transform: translateY(110%);
+    font-size: 1rem;
+    font-weight: $font-weight-400;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  a {
+    @include list-style;
+    color: map-get($colors, text-color);
+    text-transform: uppercase;
+    transform: translateY(490%);
+    border: solid white 1px;
+    padding: 0.8rem 1.8rem;
+  }
+
+  .video-container {
+    padding: 7rem;
+    background-color: rgba(0, 157, 220, 255);
+  }
+
+  .video {
+    background-color: rgba(0, 157, 220, 255);
+    padding: 3rem 0;
+
+    .div-container {
+      position: relative;
+      width: $width;
+      overflow: hidden;
+      padding-top: 56.25%;
+      background-color: green;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: $width;
+        height: $width;
+        border: $border-none;
+        border: solid 15px rgba(21, 74, 102, 255);
+      }
     }
-
-    h2 {
-        transform: translateY(100%);
-        font-size: 2rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        max-width: 500px;
-    }
-
-    p {
-        transform: translateY(110%);
-        font-size: 1rem;
-        font-weight: 400;
-        min-width: 300px;
-        max-width: 300px;
-    }
-
-    a {
-        @include list-style;
-        color: white;
-        text-transform: uppercase;
-        transform: translateY(490%);
-        border: solid white 1px;
-        padding: 0.8rem 1.8rem;
-    }
-
-    .video-container {
-        padding: 7rem;
-        background-color: rgba(0,157,220,255);
-    }
-
-    .video {
-        background-color: rgba(0, 157, 220, 255);
-        padding: 3rem 0;
-        
-    
-
-    
-        .div-container{
-        
-         
-            position: relative;
-            width: 100%;
-            
-            overflow: hidden;
-            padding-top: 56.25%;
-            background-color: green;
-    
-           
-
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-                border: solid 15px rgba(21, 74, 102, 255);
-            }
-
-        }
-    }
-
-    
-
-  
+  }
 }
 
 @media (min-width: $breakpoint-tablet) {
-
-    .about {
-
-        h2 {
-            transform: translateY(100%);
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            max-width: 90vw;
-        }
-
-        p {
-            transform: translateY(190%);
-            font-size: 1rem;
-            font-weight: 400;
-            min-width: 500px;
-            max-width: 500px;
-            line-height: 1.2;
-        }
-
-
-     
-
-
+  .about {
+    h2 {
+      @include h2;
+      max-width: 90vw;
     }
-}
 
+    p {
+      @include p;
+    }
+  }
+}
 
 @media (min-width: $breakpoint-desktop) {
-
-    .about {
-
-        h2 {
-            transform: translateY(100%);
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            max-width: 60vw;
-        }
-
-        p {
-            transform: translateY(190%);
-            font-size: 1rem;
-            font-weight: 400;
-            min-width: 500px;
-            max-width: 500px;
-            line-height: 1.2;
-        }
-
-        .video-container {
-            padding: 3rem 15rem;
-            background-color: rgba(0,157,220,255);
-        }
-
-
+  .about {
+    h2 {
+      @include h2;
+      max-width: 60vw;
     }
 
-}
+    p {
+      @include p;
+    }
 
+    .video-container {
+      padding: 3rem 15rem;
+      background-color: rgba(0, 157, 220, 255);
+    }
+  }
+}
 
 @media (min-width: $breakpoint-desktop-large) {
-
-    .about {
-
-        h2 {
-            transform: translateY(100%);
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            max-width: 50vw;
-        }
-
-        p {
-            transform: translateY(190%);
-            font-size: 1rem;
-            font-weight: 400;
-            min-width: 830px;
-            max-width: 830px;
-            line-height: 1.2;
-        }
-
-
+  .about {
+    h2 {
+      transform: translateY(100%);
+      font-size: 2rem;
+      font-weight: $font-weight-700;
+      text-transform: uppercase;
+      max-width: 50vw;
     }
 
+    p {
+      transform: translateY(190%);
+      font-size: 1rem;
+      font-weight: $font-weight-400;
+      min-width: 830px;
+      max-width: 830px;
+      line-height: 1.2;
+    }
+  }
 }
-
-
-// @media (min-width: 83.75em) {
-
-//     .about {
-
-//         h2 {
-//             transform: translateY(170%);
-//             font-size: 2rem;
-//             font-weight: 700;
-//             text-transform: uppercase;
-//             max-width: 45vw;
-//         }
-
-//         p {
-//             transform: translateY(430%);
-//             font-size: 1rem;
-//             font-weight: 400;
-//             min-width: 630px;
-//             max-width: 630px;
-//             line-height: 1.2;
-//         }
-
-//         a {
-//             @include list-style;
-//             color: white;
-//             text-transform: uppercase;
-//             transform: translateY(490%);
-//             border: solid white 1px;
-//             padding: 0.8rem 3.3rem;
-//             font-weight: 700;
-//         }
-//     }
-   
-// }

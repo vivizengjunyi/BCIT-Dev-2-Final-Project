@@ -1,444 +1,418 @@
 .banner {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 
-    .slide {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: none;
-        padding: 0 15px;
+  .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0 15px;
 
-        img {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            object-fit: cover;
-            display: flex;
-            justify-content: center;
-            z-index: 1;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+  }
+  .active {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
 
+  .indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    z-index: 2;
+    transform: translateX(-50%);
+
+    div {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      color: white;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      margin: 0 5px;
     }
     .active {
-        display: flex;
-        margin: 0;
-        padding: 0;
+      background-color: rgb(98, 197, 230);
+    }
+  }
+  .column {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    p {
+      font-family: $heading-font;
+      font-weight: 700;
+      font-size: 40px;
+      color: white;
+      text-transform: uppercase;
+      line-height: 1.2;
     }
 
-    .indicator {
-        position: absolute;
-        left: 50%;
-        bottom: 120px;
-        z-index: 2;
-        transform: translateX(-50%);
+    .flexContainer {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      box-sizing: border-box;
 
-        div {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            color: white;
-            background-color: white;
-            border-radius: 50%;
-            text-align: center;
-            margin: 0 5px;  
-        }
-        .active {
-            background-color: rgb(98, 197, 230);
-        }
-    }
-    .column {
-        position:absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 2;
-        color:white;
+      a {
+        color: white;
         text-transform: uppercase;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 95%;
-
-        p {
-            font-family: $heading-font;
-            font-weight: 700;
-            font-size: 40px;
-            color:white;
-            text-transform: uppercase;
-            line-height: 1.2;
-            
-        }
-
-        .flexContainer {
-            display: flex;
-            flex-direction: column;
-            padding: 3rem;
-            box-sizing: border-box;
-
-            a {
-                color:white;
-                text-transform: uppercase;
-                background-color: transparent;
-                border: 1px solid white;
-                padding: 10px;
-                box-sizing: border-box;
-                margin: 8px;
-                font-weight: 10px;
-                width: 200px;
-            }
-        }
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 8px;
+        font-weight: 10px;
+        width: 200px;
+      }
     }
+  }
 
-    .wave-white {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: 100px;
-        object-fit: cover;  
-    }
+  .wave-white {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
 }
 
 .navBar {
-    position: absolute;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  align-items: center;
+
+  .topInformation {
+    display: none;
+  }
+
+  .logo {
+    padding: 5px;
+
+    svg {
+      width: 120px;
+      height: 60px;
+      padding-left: 15px;
+    }
+  }
+
+  .btn-menu {
+    margin: 0 20px 20px 0;
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+
+    .burger-menu {
+      cursor: pointer;
+      display: block;
+      height: 24px;
+
+      .bar {
+        display: block;
+        height: 4px;
+        background-color: white;
+        width: 100%;
+        position: relative;
+        top: 20px;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 4px;
+          top: 10px;
+          left: 0;
+          background-color: white;
+          position: absolute;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:after {
+          content: "";
+          width: 100%;
+          height: 4px;
+          top: -10px;
+          left: 0;
+          background-color: white;
+          position: absolute;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .showUp {
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  nav {
     width: 100%;
-    background-color: black;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: space-between !important;
-    align-items: center;
+    padding: 0;
+    margin: 0;
+    display: none;
+
+    ul {
+      text-align: left;
+
+      li {
+        font-weight: 400;
+        font-family: $body-content-font;
+
+        a {
+          text-decoration: none;
+          padding: 0 20px;
+          font-size: 1em;
+          display: block;
+          color: white;
+          line-height: 30px;
+
+          &:hover {
+            background-color: rgb(98, 197, 230);
+          }
+        }
+      }
+    }
+  }
+
+  .show {
+    .about {
+      h2 {
+        transform: translateY(100%);
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 60vw;
+      }
+
+      p {
+        transform: translateY(190%);
+        font-size: 1rem;
+        font-weight: 400;
+        min-width: 500px;
+        max-width: 500px;
+        line-height: 1.2;
+      }
+
+      .video-container {
+        padding: 3rem 15rem;
+        background-color: rgba(0, 157, 220, 255);
+      }
+    }
+    display: block;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .banner {
+    .column {
+      p {
+        font-size: 50px;
+      }
+
+      .flexContainer {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+      }
+    }
+  }
+
+  .navBar {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .topInformation {
-        display: none;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      z-index: 2;
+      color: white;
+      margin: 10px;
+      text-transform: uppercase;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+      }
+
+      .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+      }
     }
-    
+
     .logo {
-    
-        padding: 5px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      margin-top: 10px;
 
-        svg {
-            width: 120px;
-            height: 60px;
-            padding-left: 15px;
-        }
+      svg {
+        padding: 0;
+        margin: 0;
+      }
     }
-    
+
     .btn-menu {
-        margin: 0 20px 20px 0;
-        display: block;
-        width: 40px;
-        background-color: transparent;
-        border: none;
-        padding: 0px;
-
-        .burger-menu {
-            cursor: pointer;
-            display:block;
-            height: 24px;
-        
-
-            .bar {
-                display: block;
-                height: 4px;
-                background-color: white;
-                width: 100%;
-                position: relative;
-                top: 20px;
-            
-                &:before {
-                    content: "";
-                    width: 100%;
-                    height: 4px;
-                    top: 10px;
-                    left: 0;
-                    background-color: white;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
-                }
-            
-                &:after {
-                    content: "";
-                    width: 100%;
-                    height: 4px;
-                    top: -10px;
-                    left: 0;
-                    background-color: white;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
-                }
-            }
-
-            .showUp {
-                    background-color: transparent;
-        
-                        &::before {
-                            top: 0;
-                            transform: rotate(45deg);
-                        }
-        
-                        &::after {
-                            top: 0;
-                            transform: rotate(-45deg);
-                        }
-                    }
-        }
-        
-        
+      display: none;
     }
 
     nav {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: none;
+      display: block;
+      z-index: 3;
+      margin: 0;
+      padding: 0;
 
-        ul {
-            text-align: left;
-
-            li {
-                font-weight: 400;
-                font-family: $body-content-font;
-
-                a {
-                    text-decoration: none;
-                    padding: 0 20px;
-                    font-size: 1em;
-                    display: block;
-                    color: white;
-                    line-height: 30px;
-
-                    &:hover {
-                        background-color: rgb(98, 197, 230);
-                    }
-                    
-                }
-            }
-        }   
-    }
-
-    .show {.about {
-
-        h2 {
-            transform: translateY(100%);
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            max-width: 60vw;
-        }
-
-        p {
-            transform: translateY(190%);
-            font-size: 1rem;
-            font-weight: 400;
-            min-width: 500px;
-            max-width: 500px;
-            line-height: 1.2;
-        }
-
-        .video-container {
-            padding: 3rem 15rem;
-            background-color: rgba(0,157,220,255);
-        }
-
-
-    }
-        display:block;
-    }
-}
-
-
-@media (min-width: $breakpoint-tablet) {
-    .banner {
-        .column {
-            p {
-                font-size: 50px;
-            }
-
-            .flexContainer {
-                display: flex !important;
-                flex-direction: row !important;
-                justify-content: center!important;
-            }
-        } 
-    }
-
-    .navBar {
-        background-color:transparent;
-        width: 100%;
+      ul {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: black;
+        opacity: 0.8;
+        margin-left: 20px;
+        margin-right: 20px;
 
-        .topInformation {
-            width: 100%;
-            position:absolute;
-            top: 0;
-            left: 0;
-            visibility:visible;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            z-index: 2;
-            color: white;
-            margin: 10px;
-            text-transform: uppercase;
-            padding-left: 20px;
-            padding-right: 20px;
-    
-            .left {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                gap: 20px;
-            }
-    
-            .right {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                gap: 20px;
-                
-            }
+        li {
+          padding: 5px;
         }
 
-        .logo {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: transparent;
-            margin-top: 10px;
-
-            svg {
-                padding: 0;
-                margin: 0;
-            }
+        .item {
+          display: none;
         }
-        
-
-        .btn-menu {
-            display: none;
-        }
-
-        nav {
-            display:block;
-            z-index: 3;
-            margin: 0;
-            padding: 0;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                background-color: black;
-                opacity: 0.8;
-                margin-left: 20px;
-                margin-right: 20px;
-
-                li {
-                    padding: 5px;
-                }
-
-                .item {
-                    display: none;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 @media (min-width: $breakpoint-desktop) {
-    .banner {
-        .column {
-            p {
-                font-size: 60px;
-                padding-top: 5%;
-                padding-right: 15%;
-                padding-left: 15%;
-            }
-        }
+  .banner {
+    .column {
+      p {
+        font-size: 60px;
+        padding-top: 5%;
+        padding-right: 15%;
+        padding-left: 15%;
+      }
     }
+  }
 
-    .navBar {
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .topInformation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 0;
+
+      .left {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+      }
 
-        .topInformation {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            padding:10px 20px;
-            margin: 0;
-
-            .left {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                gap: 20px;
-                
-            }
-
-            .right {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                gap: 20px;
-            }
-        }
-
-        .logo {
-            padding:0;
-
-            svg {
-                width: 200px;
-                height: 160px;
-            }
-        }
-
-        nav {
-            margin-left: 20%;
-            margin-right: 20%;
-        }
+      .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+      }
     }
+
+    .logo {
+      padding: 0;
+
+      svg {
+        width: 200px;
+        height: 160px;
+      }
+    }
+
+    nav {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  }
 }
 
 @media (min-width: $breakpoint-desktop-large) {
-    .banner {
-        .column {
-            p {
-                font-size: 70px;
-                padding-top: 5%;
-                padding-right: 15%;
-                padding-left: 15%;
-            }
-        }
+  .banner {
+    .column {
+      p {
+        font-size: 70px;
+        padding-top: 5%;
+        padding-right: 15%;
+        padding-left: 15%;
+      }
     }
+  }
 }
-
-
-
-
-    
-
-
-
-
-
-
-
-
