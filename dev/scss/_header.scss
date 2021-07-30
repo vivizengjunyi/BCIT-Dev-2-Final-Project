@@ -41,14 +41,14 @@
             display: inline-block;
             width: 12px;
             height: 12px;
-            color: white;
-            background-color: white;
+            color: map-get($colors, text-color);
+            background-color: map-get($colors, text-color);
             border-radius: 50%;
             text-align: center;
             margin: 0 5px;  
         }
         .active {
-            background-color: rgb(98, 197, 230);
+            background-color: map-get($colors, primary-color);
         }
     }
     .column {
@@ -58,7 +58,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
         z-index: 2;
-        color:white;
+        color:map-get($colors, text-color);
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
@@ -70,23 +70,22 @@
             font-family: $heading-font;
             font-weight: 700;
             font-size: 40px;
-            color:white;
+            color:map-get($colors, text-color);
             text-transform: uppercase;
             line-height: 1.2;
             
         }
 
         .flexContainer {
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
             padding: 3rem;
             box-sizing: border-box;
 
             a {
-                color:white;
+                color:map-get($colors, text-color);
                 text-transform: uppercase;
                 background-color: transparent;
-                border: 1px solid white;
+                border: 1px solid map-get($colors, text-color);
                 padding: 10px;
                 box-sizing: border-box;
                 margin: 8px;
@@ -110,7 +109,7 @@
 .navBar {
     position: absolute;
     width: 100%;
-    background-color: black;
+    background-color:map-get($colors, header-bg);
     opacity: 0.7;
     top: 0;
     left: 0;
@@ -153,7 +152,7 @@
             .bar {
                 display: block;
                 height: 4px;
-                background-color: white;
+                background-color:map-get($colors, text-color);
                 width: 100%;
                 position: relative;
                 top: 20px;
@@ -164,9 +163,8 @@
                     height: 4px;
                     top: 10px;
                     left: 0;
-                    background-color: white;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
+                    background-color: map-get($colors, text-color);
+                    @include position-transition;
                 }
             
                 &:after {
@@ -175,9 +173,8 @@
                     height: 4px;
                     top: -10px;
                     left: 0;
-                    background-color: white;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
+                    background-color: map-get($colors, text-color);
+                    @include position-transition;
                 }
             }
 
@@ -217,11 +214,11 @@
                     padding: 0 20px;
                     font-size: 1em;
                     display: block;
-                    color: white;
+                    color: map-get($colors, text-color);
                     line-height: 30px;
 
                     &:hover {
-                        background-color: rgb(98, 197, 230);
+                        background-color: map-get($colors, primary-color);
                     }
                     
                 }
@@ -278,8 +275,7 @@
     .navBar {
         background-color:transparent;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         justify-content: center;
 
         .topInformation {
@@ -288,30 +284,41 @@
             top: 0;
             left: 0;
             visibility:visible;
-            display: flex;
-            flex-direction: row;
+            @include flex-row;
             justify-content: space-between;
             z-index: 2;
-            color: white;
+            color: map-get($colors, text-color);
             margin: 10px;
             text-transform: uppercase;
             padding-left: 20px;
             padding-right: 20px;
     
             .left {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-around;
-                gap: 20px;
+                gap: 10px;
+
+                p {
+                    padding: unset;
+                }
             }
     
             .right {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-around;
                 align-items: center;
-                gap: 20px;
-                
+                gap: 10px;
+
+                .right1 {
+                    gap: 8px;
+                    @include flex-row;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        padding:unset;
+                    }
+                }
             }
         }
 
@@ -340,10 +347,9 @@
             padding: 0;
 
             ul {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-around;
-                background-color: black;
+                background-color: map-get($colors, header-bg);
                 opacity: 0.8;
                 margin-left: 20px;
                 margin-right: 20px;
@@ -373,29 +379,25 @@
     }
 
     .navBar {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         justify-content: center;
 
         .topInformation {
-            display: flex;
-            flex-direction: row;
+            @include flex-row;
             justify-content: space-between;
             width: 100%;
             padding:10px 20px;
             margin: 0;
 
             .left {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: flex-start;
                 gap: 20px;
                 
             }
 
             .right {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: flex-end;
                 gap: 20px;
             }
