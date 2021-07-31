@@ -20,7 +20,7 @@
   display: block;
 }
 svg {
-  fill: white;
+  fill: map-get($colors, text-color);
   margin: 0 0.3rem;
   align-items: center;
   justify-content: center;
@@ -39,8 +39,8 @@ footer {
   padding: 0;
   margin: 0;
   height: 200px;
-  background-color: #429bd6;
-  color: white;
+  background-color: map-get($colors, primary-color);
+  color: map-get($colors, text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -68,14 +68,27 @@ p {
 }
 
 @media (min-width: $breakpoint-tablet) {
+  footer {
+  background-color: map-get($colors, primary-color);
+  }
+
   .blue {
     flex-direction: row;
   }
+
+  .wave-sky-blue {
+    transform:translate(0, -35px);
+  }
+
 }
 @media (min-width: $breakpoint-desktop) {
   .flex-container {
     display: flex;
     flex-direction: row;
+  }
+
+  .wave-sky-blue {
+    transform:translate(0, -70px);
   }
 }
 // .blue {

@@ -5,7 +5,7 @@
 .contact-location {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  font-family: "Roboto", sans-serif;
+  font-family: $body-content-font;
   text-transform: uppercase;
   font-weight: 700;
   .map {
@@ -37,24 +37,20 @@
     position: relative;
     text-align: center;
     background-color: #244a64;
-    color: white;
+    color: map-get($colors, text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .contact-txt {
       padding: 1rem;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       h2 {
         font-size: 25px;
         margin: 2rem;
       }
       a {
-        color: white;
-        border: 1px solid white;
+        color: map-get($colors, text-color);
+        border: 1px solid map-get($colors, text-color);
         padding: 0.5rem;
       }
     }
@@ -69,18 +65,24 @@
       order: 2;
       .map-txt {
         a {
-          color: white;
+          color: map-get($colors, text-color);
           border: none;
-          background-color: #429bd6;
+          background-color: map-get($colors, primary-color);
+          display:block;
+          margin: 0 auto;
+          width: max-content;
         }
       }
     }
     .contact {
       .contact-txt {
+        padding-bottom: 4rem;
+
         a {
-          color: white;
+          color: map-get($colors, text-color);
           border: none;
-          background-color: #429bd6;
+          background-color: map-get($colors, primary-color);
+          
         }
       }
     }
