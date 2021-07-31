@@ -94,6 +94,9 @@
 
   .wave-blue {
     transform: translateY(3px);
+    img {
+      width: 100%;
+    }
   }
 
   @media screen and (min-width: $breakpoint-mobile) {
