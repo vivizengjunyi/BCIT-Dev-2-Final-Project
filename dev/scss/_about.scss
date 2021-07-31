@@ -6,7 +6,7 @@
   .about-bg {
     @include flex-column;
     align-items: center;
-    background-image: url("/images/bg-section-about-us.jpg");
+    background-image: url("../images/bg-section-about-us.jpg");
     background-position-x: 47%;
     background-color: lightblue;
     min-height: 570px;
