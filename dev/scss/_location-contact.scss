@@ -3,96 +3,94 @@
 // font-family: "Roboto Condensed", sans-serif;
 
 .contact-location {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  font-family: $body-content-font;
-  text-transform: uppercase;
-  font-weight: 700;
-  .map {
-    position: relative;
-    text-align: center;
-    order: -2;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    .map-txt {
-      color: #504f4f;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      h2 {
-        font-size: 25px;
-        margin: 2rem;
-      }
-      a {
-        color: #504f4f;
-        padding: 0.5rem;
-        border: 1px solid #504f4f;
-      }
-    }
-  }
-  .contact {
-    position: relative;
-    text-align: center;
-    background-color: #244a64;
-    color: map-get($colors, text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .contact-txt {
-      padding: 1rem;
-      h2 {
-        font-size: 25px;
-        margin: 2rem;
-      }
-      a {
-        color: map-get($colors, text-color);
-        border: 1px solid map-get($colors, text-color);
-        padding: 0.5rem;
-      }
-    }
-  }
-
-  @media (min-width: $breakpoint-tablet) {
     display: grid;
-    grid-template-rows: none;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: dense;
+    grid-template-rows: 1fr 1fr;
+    font-family: $body-content-font;
+    text-transform: uppercase;
+    font-weight: 700;
     .map {
-      order: 2;
-      .map-txt {
-        a {
-          color: map-get($colors, text-color);
-          border: none;
-          background-color: map-get($colors, primary-color);
-          display:block;
-          margin: 0 auto;
-          width: max-content;
+        position: relative;
+        text-align: center;
+        order: -2;
+        img {
+            width: 100%;
+            height: 100%;
         }
-      }
+        .map-txt {
+            color: #504f4f;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            h2 {
+                font-size: 25px;
+                margin: 2rem;
+            }
+            a {
+                display: block;
+                width: max-content;
+
+                margin: 0 auto;
+                color: #504f4f;
+                padding: 0.5rem;
+                border: 1px solid #504f4f;
+            }
+        }
     }
     .contact {
-      .contact-txt {
-        padding-bottom: 4rem;
-
-        a {
-          color: map-get($colors, text-color);
-          border: none;
-          background-color: map-get($colors, primary-color);
-          
+        position: relative;
+        text-align: center;
+        background-color: #244a64;
+        color: map-get($colors, text-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .contact-txt {
+            padding: 1rem;
+            padding-bottom: 7rem;
+            h2 {
+                font-size: 25px;
+                margin: 2rem;
+            }
+            a {
+                color: map-get($colors, text-color);
+                border: 1px solid map-get($colors, text-color);
+                padding: 0.5rem;
+            }
         }
-      }
     }
-  }
 
-  @media (min-width: $breakpoint-desktop) {
-    .wave-blue-light {
-      display: flex;
-      position: absolute;
-      top: 0;
+    @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: dense;
+        .map {
+            order: 2;
+            .map-txt {
+                a {
+                    color: map-get($colors, text-color);
+                    border: none;
+                    background-color: map-get($colors, primary-color);
+                    display: block;
+                    margin: 0 auto;
+                    width: max-content;
+                }
+            }
+        }
+        .contact {
+            .contact-txt {
+                padding-top: 3rem;
+                padding-bottom: 7rem;
+
+                a {
+                    color: map-get($colors, text-color);
+                    border: none;
+                    background-color: map-get($colors, primary-color);
+                }
+            }
+        }
     }
-  }
-}
+
+    
